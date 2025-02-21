@@ -45,15 +45,10 @@
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             @if(!$borrowing->returned_at)
-                            @if($borrowing->isOverdue())
-                            <span class="px-2 py-1 text-xs font-medium bg-secondary/10 text-secondary rounded-full">
-                                En retard
-                            </span>
-                            @else
+
                             <span class="px-2 py-1 text-xs font-medium bg-tertiary/10 text-tertiary rounded-full">
                                 En cours
                             </span>
-                            @endif
                             @else
                             <span class="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-full">
                                 Retourné

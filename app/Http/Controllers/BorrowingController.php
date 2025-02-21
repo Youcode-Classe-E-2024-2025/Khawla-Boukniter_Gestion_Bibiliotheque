@@ -61,21 +61,6 @@ class BorrowingController extends Controller
                 ->count()
         ];
 
-
-        $recentActivities = Borrowing::with(['user', 'book'])
-            ->latest()
-            ->take(3)
-            ->get()
-            ->map(function ($borrowing) {
-                return [
-                    'user' => $borrowing->user,
-                    'description' => $borrowing->returned_at
-                        ? "Retour: {$borrowing->book->title}"
-                        : "Emprunt: {$borrowing->book->title}",
-                    'created_at' => $borrowing->returned_at ?? $borrowing->borrowed_at
-                ];
-            });
-
         $recentBorrowings = Borrowing::with(['user', 'book'])
             ->latest()->paginate(10);
 
