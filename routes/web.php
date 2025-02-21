@@ -10,7 +10,7 @@ use App\Models\Book;
 Route::get('/', function () {
     $latestBooks = Book::latest()->take(4)->get();
     return view('welcome', compact('latestBooks'));
-});
+})->name('welcome');
 
 
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
@@ -37,4 +37,4 @@ Route::middleware('auth')->group(function () {
     Route::put('/borrowings/{borrowing}/return', [BorrowingController::class, 'returnBook'])->name('borrowings.return');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/books/{book}', [BookController::class, 'show'])->name('books.show');

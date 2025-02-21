@@ -27,7 +27,7 @@
     <nav class="bg-gradient-to-r from-primary to-tertiary shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <a href="{{ route('books.index') }}" class="text-2xl font-bold text-lighter hover:text-light transition-all duration-300">
+                <a href="{{ route('welcome') }}" class="text-2xl font-bold text-lighter hover:text-light transition-all duration-300">
                     Bibliothèque
                 </a>
 

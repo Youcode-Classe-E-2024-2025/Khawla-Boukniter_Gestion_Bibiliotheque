@@ -50,14 +50,10 @@
                         <p class="font-medium">{{ $book->quantity }} livre(s) disponible(s)</p>
                     </div>
                 </div>
-                <form method="POST" action="{{ route('borrowings.store') }}" class="mt-4">
-                    @csrf
-                    <input type="hidden" name="book_id" value="{{ $book->id }}">
-                    <button type="submit"
-                        class="w-full bg-tertiary text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105">
-                        Emprunter
-                    </button>
-                </form>
+                <a href="{{ route('books.show', $book) }}" class="text-primary hover:text-primary-dark py-2 block mt-4">
+                    En savoir plus →
+                </a>
+
             </div>
         </div>
         @endif

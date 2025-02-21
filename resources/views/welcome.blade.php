@@ -65,7 +65,6 @@
         </div>
     </div>
 
-    <!-- Latest Books Section -->
     <div class="bg-lighter py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Derniers Ajouts</h2>
@@ -74,7 +73,7 @@
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ $book->title }}</h3>
                     <p class="text-gray-600 text-sm mb-4">{{ $book->author }}</p>
-                    <a href="{{ route('books.index') }}" class="text-primary hover:text-primary-dark font-medium">
+                    <a href="{{ route('books.show', $book) }}" class="text-primary hover:text-primary-dark font-medium">
                         En savoir plus →
                     </a>
                 </div>

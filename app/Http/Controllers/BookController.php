@@ -79,4 +79,10 @@ class BookController extends Controller
 
         return redirect()->route('books.index')->with('success', 'Book deleted successfully.');
     }
+
+    public function show(Book $book)
+    {
+        $book->load('borrowings');
+        return view('books.show', compact('book'));
+    }
 }

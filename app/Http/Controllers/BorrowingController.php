@@ -12,7 +12,7 @@ class BorrowingController extends Controller
 {
     public function index()
     {
-        $borrowings = Borrowing::with('user', 'book')->get();
+        $borrowings = Borrowing::with('user', 'book')->paginate(6);
         return view('borrowings.index', ['borrowings' => $borrowings]);
     }
 

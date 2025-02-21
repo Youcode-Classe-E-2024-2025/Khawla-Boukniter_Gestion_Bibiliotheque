@@ -64,5 +64,8 @@
         </div>
         @endforeach
     </div>
+    <div class="mt-8">
+        {{ $borrowings->links() }}
+    </div>
 </div>
 @endsection
