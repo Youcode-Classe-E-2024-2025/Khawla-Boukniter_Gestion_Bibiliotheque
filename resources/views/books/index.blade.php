@@ -18,7 +18,6 @@
             <table class="w-full">
                 <thead class="bg-lighter">
                     <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider">#</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider">Titre</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider">Auteur</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider">Description</th>
@@ -29,7 +28,6 @@
                 <tbody class="divide-y divide-gray-100">
                     @foreach ($books as $book)
                     <tr class="hover:bg-lighter transition-colors">
-                        <td class="px-6 py-4">{{ $book->id }}</td>
                         <td class="px-6 py-4">{{ $book->title }}</td>
                         <td class="px-6 py-4">{{ $book->author }}</td>
                         <td class="px-6 py-4">{{ $book->description }}</td>
