@@ -5,9 +5,11 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\BorrowingController;
+use App\Models\Book;
 
 Route::get('/', function () {
-    return view('welcome');
+    $latestBooks = Book::latest()->take(4)->get();
+    return view('welcome', compact('latestBooks'));
 });
 
 
