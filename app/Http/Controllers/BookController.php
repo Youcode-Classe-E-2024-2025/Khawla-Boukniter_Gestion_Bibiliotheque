@@ -15,9 +15,18 @@ class BookController extends Controller
         $this->user = $user;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $books = Book::paginate(10);
+        $query = Book::query();
+
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $query->where('title', 'ilike', '%' . $search . '%')
+                ->orWhere('author', 'ilike', '%' . $search . '%')
+                ->orWhere('description', 'ilike', '%' . $search . '%');
+        }
+
+        $books = $query->paginate(6);
 
         if (Auth::check() && Auth::user()->role === 'admin') {
             return view('books.index', ['books' => $books]);

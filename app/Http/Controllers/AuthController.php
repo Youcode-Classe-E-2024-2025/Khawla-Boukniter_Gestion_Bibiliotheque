@@ -93,7 +93,7 @@ class AuthController extends Controller
             $passed = Borrowing::with('book')
                 ->where('user_id', $user->id)
                 ->whereNotNull('returned_at')
-                ->get();
+                ->latest()->limit(3)->get();
 
             return view('auth.profile', compact('current', 'passed'));
         }
