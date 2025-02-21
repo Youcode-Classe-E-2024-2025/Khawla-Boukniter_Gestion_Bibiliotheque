@@ -7,7 +7,7 @@ A modern web application for managing library resources, built with Laravel and 
 ### User Management
 - Role-based authentication (Admin/User)
 - User registration and login
-- Personal dashboard for users
+- Personal dashboard for Admin
 - Profile management
 
 ### Book Management
@@ -25,9 +25,7 @@ A modern web application for managing library resources, built with Laravel and 
 
 ### Admin Dashboard
 - Global statistics
-- Recent activities monitoring
-- User management
-- Book inventory oversight
+- Recent activities 
 - Borrowing management
 
 ## Technical Stack
@@ -41,8 +39,6 @@ A modern web application for managing library resources, built with Laravel and 
 ### Frontend
 - Tailwind CSS
 - Blade Templates
-- Responsive Design
-- Modern UI Components
 
 ## Database Structure
 
@@ -88,8 +84,8 @@ npm run dev
 
 ## Usage
 * Admin Access
-- Manage books inventory
-- Monitor borrowing activities
+- Manage books 
+- View borrowing status
 - View statistics
 
 * User Access
